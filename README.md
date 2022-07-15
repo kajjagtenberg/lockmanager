@@ -41,7 +41,7 @@ func main() {
 
 		return nil
 	}); err != nil {
-		return err
+		log.Fatal(err)
 	}
 
 	if err := manager.Lock(ctx, "test", func() error {
